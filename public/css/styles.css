@@ -244,9 +244,6 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
-  /* list-style: none; */
-  /* padding: 0; */
-  /* margin: 0; */
 }
 
 .service-areas-grid .area-item {
@@ -261,6 +258,41 @@ body {
 .service-areas-grid .area-item:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 40px rgba(30, 58, 138, 0.15);
+}
+
+/**************************************************************
+* Footer
+***************************************************************/
+
+footer {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%) !important;
+}
+
+footer a {
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--accent-yellow) !important;
+  border-bottom: 1px solid var(--accent-yellow);
+}
+
+.social-links a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  line-height: 40px;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: var(--accent-yellow);
+  color: var(--dark-gray) !important;
+  transform: translateY(-2px);
 }
 
 /**************************************************************
