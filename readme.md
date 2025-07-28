@@ -5,9 +5,9 @@ Deployed live on Netlify: https://guttershawaii.netlify.app/
 
 ## Features
 * Static webpage deployed with Netlify
-<!-- * Responsive to mobile viewports -->
-<!-- * Accessible to screen readers / Semantic HTML & ARIA -->
-<!-- * SEO Meta tags -->
+* Responsive to mobile viewports
+* Accessible to screen readers / Semantic HTML & ARIA
+* SEO Meta tags
 <!-- * Functional Contact Form -->
 <!-- * WebP image format -->
 
@@ -28,5 +28,4 @@ Deployed live on Netlify: https://guttershawaii.netlify.app/
 
 - The business owner asked if I could design his website to look like Windows Hawaii's website
     - I consider the layout to be outdated, but this build reminds me of the Style's Conference web page I built when I was learning HTML & CSS
-
 ---------------------------------------------------------------------------------------------------------------------------
