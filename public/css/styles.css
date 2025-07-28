@@ -62,27 +62,26 @@ body {
   /* Skip link styles for accessibility */
   .skip-link {
     position: absolute;
-    left: -999px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: white;
+    padding: 8px;
     z-index: 100;
-    background: #fff;
-    color: black;
-    padding: 0.5em 1em;
-    border-radius: 4px;
+    transition: top 0.3s;
   }
   .skip-link:focus {
-    left: 1em;
-    top: 1em;
-    width: auto;
-    height: auto;
-    outline: 2px solid #fff;
+    top: 0;
   }
   .is-hidden {
     display: none !important;
   }
+
+  /* focus states */
+  a:focus, button:focus, input:focus, select:focus, textarea:focus {
+    outline: 3px solid var(--accent-yellow) !important;
+    outline-offset: 2px !important;
+}
 
 /**************************************************************
 * Header
