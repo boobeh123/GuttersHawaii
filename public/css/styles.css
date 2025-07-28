@@ -231,12 +231,64 @@ body {
   /* border: 2px solid red !important; */
   padding: 1rem;
 }
+
+/**************************************************************
+* Service Areas
+***************************************************************/
+
+.service-areas {
+  padding: 80px 0;
+}
+
+.service-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  /* list-style: none; */
+  /* padding: 0; */
+  /* margin: 0; */
+}
+
+.service-areas-grid .area-item {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.service-areas-grid .area-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(30, 58, 138, 0.15);
+}
+
 /**************************************************************
 * Media queries
 ***************************************************************/
 
 @media (max-width: 600px) {
+
   .hero-section {
     padding-top: 5rem;
   }
+
+}
+
+@media (max-width: 810px) {
+
+  #services .container .row {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .why-choose-section .container .row .col-lg-6 {
+    /* border: 2px solid red !important; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
 }
