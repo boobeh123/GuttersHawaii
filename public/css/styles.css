@@ -115,6 +115,7 @@ body {
               url('https://placehold.co/600x400?text=background&font=roboto') center/cover;
   min-height: 100vh;
   position: relative;
+  padding-bottom: 1.5rem;
 }
 
 .hero-buttons .btn {
@@ -199,6 +200,37 @@ body {
   /* border: 2px solid red !important; */
 }
 
+/**************************************************************
+* About us
+***************************************************************/
+
+.why-choose-section {
+  padding: 80px 0;
+  /* border: 2px solid red !important; */
+}
+
+.feature-list .feature-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  /* border: 2px solid red !important; */
+}
+
+.feature-list .feature-item i {
+  font-size: 1.2rem;
+  margin-top: 2px;
+  /* border: 2px solid red !important; */
+}
+
+.feature-item {
+  font-size: 1.1rem;
+  /* border: 2px solid red !important; */
+}
+
+.why-choose-section .container .row .col-lg-6 {
+  /* border: 2px solid red !important; */
+  padding: 1rem;
+}
 /**************************************************************
 * Media queries
 ***************************************************************/
