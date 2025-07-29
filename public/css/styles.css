@@ -244,6 +244,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
+  padding-left: 0rem !important;
 }
 
 .service-areas-grid .area-item {
