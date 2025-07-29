@@ -282,11 +282,104 @@
             </div>
         </div>
     </section>
+<section id="contact" class="py-5 bg-light" aria-labelledby="contact-heading">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2 id="contact-heading" class="text-center mb-5">Get In Touch</h2>
+                <form 
+                    name="contact" 
+                    method="POST" 
+                    data-netlify="true" 
+                    netlify-honeypot="bot-field"
+                    class="needs-validation" 
+                    novalidate
+                    aria-label="Contact form">
+                    <div class="visually-hidden">
+                        <label for="bot-field">Don't fill this out if you're human:</label>
+                        <input id="bot-field" name="bot-field" />
+                    </div>
+                    <input type="hidden" name="form-name" value="contact" />
+                    <div class="mb-4">
+                        <label for="name" class="form-label fw-bold">Full Name <span class="text-danger" aria-hidden="true">*</span></label>
+                        <input 
+                            type="text" 
+                            class="form-control form-control-lg" 
+                            id="name" 
+                            name="name" 
+                            required
+                            aria-required="true"
+                            placeholder="John Doe"
+                            autocomplete="name"
+                            >
+                        <div class="invalid-feedback">
+                            Please provide your name.
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="form-label fw-bold">Email Address <span class="text-danger" aria-hidden="true">*</span></label>
+                        <input 
+                            type="email" 
+                            class="form-control form-control-lg" 
+                            id="email" 
+                            name="email" 
+                            required
+                            aria-required="true"
+                            placeholder="john@example.com"
+                            autocomplete="email"
+                        >
+                        <div class="invalid-feedback">
+                            Please provide a valid email address.
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="phone" class="form-label fw-bold">Phone Number</label>
+                        <input 
+                            type="tel" 
+                            class="form-control form-control-lg" 
+                            id="phone" 
+                            name="phone"
+                            placeholder="(808) 123-4567"
+                            aria-describedby="phoneHelp"
+                            autocomplete="tel"
+                        >
+                        <div id="phoneHelp" class="form-text">We'll never share your number with anyone else.</div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="message" class="form-label fw-bold">Your Message <span class="text-danger" aria-hidden="true">*</span></label>
+                        <textarea 
+                            class="form-control form-control-lg" 
+                            id="message" 
+                            name="message" 
+                            rows="5" 
+                            required
+                            aria-required="true"
+                            placeholder="How can we help you today?"
+                            spellcheck="true"
+                        ></textarea>
+                        <div class="invalid-feedback">
+                            Please enter your message.
+                        </div>
+                    </div>
+                    
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg" aria-describedby="submitHelp" title="Submit your message to Gutters Hawaii">
+                            <i class="fas fa-paper-plane me-2" aria-hidden="true"></i>Send Message
+                        </button>
+                        <div id="submitHelp" class="form-text">We'll never share your data with anyone else.</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
     <footer class="bg-primary text-white py-5" role="contentinfo" aria-label="Footer">
         <div class="container" role="content">
             <div class="row">
                 <div class="col-lg-4 mb-4">
-                    <h5 class="fw-bold mb-3">Gutters Hawaii</h5>
+                    <h2 class="fw-bold mb-3">Gutters Hawaii</h2>
                     <p>Hawaii's premier gutter installation and repair service. Protecting your home with professional quality and local expertise.</p>
                     <div class="social-links">
                         <a href="#" class="text-white me-3" aria-label="Visit our Facebook page" rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
@@ -295,7 +388,7 @@
                     </div>
                 </div>
                 <div class="col-lg-2 mb-4">
-                    <h6 class="fw-bold mb-3">Services</h6>
+                    <h3 class="fw-bold mb-3">Services</h3>
                     <ul class="list-unstyled" aria-label="Our Services">
                         <li><a href="#services" class="text-white-50">Installation</a></li>
                         <li><a href="#services" class="text-white-50">Repair</a></li>
@@ -304,7 +397,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-3 mb-4">
-                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <h3 class="fw-bold mb-3">Quick Links</h3>
                     <ul class="list-unstyled" aria-label="Quick Links">
                         <li><a href="/" class="text-white-50" aria-current="page">Home</a></li>
                         <li><a href="#services" class="text-white-50">Services</a></li>
@@ -313,7 +406,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-3 mb-4">
-                    <h6 class="fw-bold mb-3">Contact Info</h6>
+                    <h3 class="fw-bold mb-3">Contact Info</h3>
                     <p class="mb-2"><i class="fas fa-phone me-2" aria-hidden="true"></i>
                         <a href="tel:808-421-8481" class="text-white-50" aria-label="Call us at (808) 421-8481">(808) 421-8481</a></p>
                     <p class="mb-2"><i class="fas fa-envelope me-2" aria-hidden="true"></i>
