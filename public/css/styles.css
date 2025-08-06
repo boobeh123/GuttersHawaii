@@ -399,8 +399,118 @@ footer a:hover {
 }
 
 /**************************************************************
+* Gallery Section
+***************************************************************/
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1400px;
+  padding: 0 15px;
+  /* border: 2px solid red; */
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  aspect-ratio: 4/3;
+  /* border: 2px solid red; */
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.75);
+  /* border: 2px solid red; */
+
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* border: 2px solid red; */
+}
+
+.gallery-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 2rem;
+  /* border: 2px solid red; */
+}
+
+.gallery-modal.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: 2px solid red; */
+
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 80vh;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  /* border: 2px solid red; */
+
+}
+
+.modal-caption {
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  /* border: 2px solid red; */
+
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: 1px solid gray;
+  padding: .5rem 1rem;
+  border-radius: 32px;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: var(--accent-yellow);
+  outline: none;
+}
+
+/**************************************************************
 * Media queries
 ***************************************************************/
+
+@media (max-width: 768px) {
+  .gallery-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .gallery-item {
+    aspect-ratio: 16/9;
+  }
+}
 
 @media (max-width: 600px) {
 
