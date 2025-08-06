@@ -20,6 +20,18 @@ Deployed live on Netlify: https://guttershawaii.netlify.app/
 
 ## Version History
 ---------------------------------------------------------------------------------------------------------------------------
+# 🛠️ Gutters Hawaii Patch 0.3 — Gallery
+📅 **Release Date:** August 5th, 2025
+
+---
+
+## 📢 Developer's Notes - **Add gallery w/ modal functionality**
+
+- The business owner provided several photos and I did not add most of them to the website
+    - The gallery now displays these photos
+
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
 # 🛠️ Gutters Hawaii Patch 0.2 — Finalize build
 📅 **Release Date:** July 28th, 2025
 
