@@ -21,6 +21,13 @@ Deployed live on Netlify: https://guttershawaii.netlify.app/
 
 ## Version History
 ---------------------------------------------------------------------------------------------------------------------------
+# 🛠️ Gutters Hawaii Patch 0.4 — Dynamic footer
+📅 **Release Date:** January 18th, 2026
+
+- There was a lot of unnecessary code in this project
+    - I could leave the project online forever and have peace of mind with this code
+![Lighthouse score for Gutters Hawaii LLC](/public/images/lighthouse2026.png)
+---------------------------------------------------------------------------------------------------------------------------
 # 🛠️ Gutters Hawaii Patch 0.3 — Gallery
 📅 **Release Date:** August 5th, 2025
 
