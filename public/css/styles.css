@@ -559,6 +559,93 @@ About
 }
 
 /**************************************************************
+Our work
+***************************************************************/
+.workSection {
+  padding-block: var(--sectionPadding);
+}
+
+/* Phones: two photos per row */
+.workGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spaceLg) var(--spaceMd);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.workItem {
+  margin: 0;
+}
+
+/* The photos are 3:4, so this shows each one whole */
+.workPhoto {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--radiusLg);
+  box-shadow: var(--shadowCard);
+}
+
+.workCaption {
+  margin-top: var(--spaceXs);
+  color: var(--colorTextSoft);
+  font-size: var(--fontSizeSm);
+  line-height: 1.45;
+}
+
+/**************************************************************
+Service areas
+***************************************************************/
+.areasSection {
+  padding-block: var(--sectionPadding);
+}
+
+.areaList {
+  columns: 2;
+  column-gap: var(--spaceLg);
+  margin: 0 0 var(--spaceXl);
+  padding: 0;
+  list-style: none;
+}
+
+.areaItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spaceSm);
+  padding-block: 0.35rem;
+  break-inside: avoid;
+}
+
+/* Small water drop before each area name */
+.areaItem::before {
+  content: '';
+  flex-shrink: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0 50% 50% 50%;
+  background-color: var(--colorSky);
+  transform: rotate(45deg);
+}
+
+.areasCta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spaceMd);
+  padding-top: var(--spaceXl);
+  border-top: 1px solid var(--colorLineOnInk);
+}
+
+.areasCtaText {
+  margin: 0;
+  font-family: var(--fontDisplay);
+  font-size: var(--fontSizeH3);
+  font-weight: 600;
+}
+
+/**************************************************************
 Footer
 ***************************************************************/
 .siteFooter {
@@ -648,6 +735,10 @@ Media queries
     column-gap: var(--spaceXl);
   }
 
+  .areaList {
+    columns: 3;
+  }
+
   .footerGrid {
     grid-template-columns: 1fr 1fr 1.4fr;
   }
@@ -660,6 +751,11 @@ Media queries
 @media (min-width: 48em) {
   .serviceList {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .workGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--spaceXl) var(--spaceLg);
   }
 }
 
@@ -725,6 +821,16 @@ Media queries
     justify-self: start;
     max-width: 28rem;
     aspect-ratio: 3 / 4;
+  }
+
+  .areaList {
+    columns: 4;
+  }
+
+  .areasCta {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .footerGrid {
