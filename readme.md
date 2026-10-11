@@ -12,6 +12,7 @@ Deployed live on Netlify: https://guttershawaii.netlify.app/
 * WebP image format, with each photo in two sizes (640px & 1080px)
 * Security headers (Content-Security-Policy) set in Netlify's `_headers` file
 * Custom 404 page
+* Tap-to-enlarge photo gallery (built on the browser's `<dialog>` element)
 
 ## Optimizations
 * Add Privacy policy - Explain what data is collected and how it is used/handled (contact form)
