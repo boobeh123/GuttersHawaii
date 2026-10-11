@@ -17,15 +17,17 @@ Base
   --colorSky: #38bdf8;
   --colorSkyLight: #7dd3fc;
   --colorSkyDeep: #0369a1;
+  --colorSkyTint: #e0f2fe;
   --colorSand: #f6f3ee;
   --colorWhite: #ffffff;
   --colorLine: #e2ddd5;
   --colorLineOnInk: rgba(255, 255, 255, 0.14);
   --colorOnInkMuted: rgba(255, 255, 255, 0.72);
 
-  /* Accent and focus colors switch to sky inside .themeInk sections */
+  /* Accent, focus, and secondary text colors switch inside .themeInk sections */
   --colorAccent: var(--colorSkyDeep);
   --colorFocus: var(--colorSkyDeep);
+  --colorTextSoft: var(--colorInkSoft);
 
   /* Fonts */
   --fontDisplay: 'Jost', 'Futura', 'Century Gothic', system-ui, sans-serif;
@@ -138,8 +140,14 @@ Utilities
 .themeInk {
   --colorAccent: var(--colorSky);
   --colorFocus: var(--colorSky);
+  --colorTextSoft: var(--colorOnInkMuted);
   background-color: var(--colorInk);
   color: var(--colorWhite);
+}
+
+/* Warm light sections */
+.themeSand {
+  background-color: var(--colorSand);
 }
 
 /* Hidden on screen, still read by screen readers */
@@ -236,6 +244,16 @@ Components
   color: var(--colorInk);
 }
 
+/* Ink button for light sections */
+.buttonDark {
+  background-color: var(--colorInk);
+  color: var(--colorWhite);
+}
+
+.buttonDark:hover {
+  background-color: var(--colorSkyDeep);
+}
+
 /* Small uppercase label above a heading */
 .eyebrow {
   margin-bottom: var(--spaceSm);
@@ -245,6 +263,28 @@ Components
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
+}
+
+/* Section headings: a short accent bar, the heading, and an intro line */
+.sectionHeader {
+  max-width: 40rem;
+  margin-bottom: var(--spaceXl);
+}
+
+.sectionTitle::before {
+  content: '';
+  display: block;
+  width: 3rem;
+  height: 4px;
+  margin-bottom: var(--spaceMd);
+  border-radius: var(--radiusPill);
+  background-color: var(--colorAccent);
+}
+
+.sectionIntro {
+  margin: 0;
+  color: var(--colorTextSoft);
+  font-size: var(--fontSizeLg);
 }
 
 /* Wordmark: water drop and company name */
@@ -359,7 +399,7 @@ Hero
 .heroLead {
   max-width: 34rem;
   margin-bottom: var(--spaceXl);
-  color: var(--colorOnInkMuted);
+  color: var(--colorTextSoft);
   font-size: var(--fontSizeLg);
 }
 
@@ -382,7 +422,7 @@ Hero
   display: flex;
   align-items: center;
   gap: var(--spaceSm);
-  color: var(--colorOnInkMuted);
+  color: var(--colorTextSoft);
 }
 
 .heroPoint .icon {
@@ -418,6 +458,107 @@ Hero
 }
 
 /**************************************************************
+Services
+***************************************************************/
+.servicesSection {
+  padding-block: var(--sectionPadding);
+}
+
+.serviceList {
+  display: grid;
+  gap: var(--spaceLg);
+  margin: 0 0 var(--spaceXl);
+  padding: 0;
+  list-style: none;
+}
+
+.serviceCard {
+  padding: var(--spaceLg);
+  border: 1px solid var(--colorLine);
+  border-radius: var(--radiusLg);
+  background-color: var(--colorWhite);
+  box-shadow: var(--shadowCard);
+}
+
+.serviceIcon {
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: var(--spaceLg);
+  border-radius: 50%;
+  background-color: var(--colorSkyTint);
+  color: var(--colorSkyDeep);
+  font-size: 1.375rem;
+}
+
+.serviceText {
+  margin: 0;
+  color: var(--colorTextSoft);
+}
+
+/**************************************************************
+About
+***************************************************************/
+.aboutSection {
+  padding-block: var(--sectionPadding);
+}
+
+.aboutLayout {
+  display: grid;
+  gap: var(--spaceXl);
+}
+
+.reasonList {
+  display: grid;
+  gap: var(--spaceLg);
+  margin: 0 0 var(--spaceXl);
+  padding: 0;
+  list-style: none;
+}
+
+.reasonItem {
+  display: flex;
+  gap: var(--spaceMd);
+}
+
+/* Check mark in a filled circle */
+.reasonIcon {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-top: 0.1rem;
+  padding: 0.35rem;
+  border-radius: 50%;
+  background-color: var(--colorSkyDeep);
+  color: var(--colorWhite);
+  stroke-width: 3;
+}
+
+.reasonTitle {
+  display: block;
+  margin-bottom: 0.15rem;
+  font-family: var(--fontDisplay);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.reasonText {
+  margin: 0;
+  color: var(--colorTextSoft);
+}
+
+.aboutPhoto {
+  justify-self: center;
+  width: 100%;
+  max-width: 26rem;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 75%;
+  border-radius: var(--radiusLg);
+  box-shadow: var(--shadowCard);
+}
+
+/**************************************************************
 Footer
 ***************************************************************/
 .siteFooter {
@@ -440,7 +581,7 @@ Footer
 .footerText {
   max-width: 24rem;
   margin-top: var(--spaceMd);
-  color: var(--colorOnInkMuted);
+  color: var(--colorTextSoft);
 }
 
 .footerHeading {
@@ -455,7 +596,7 @@ Footer
   gap: var(--spaceXs);
   margin: 0;
   padding: 0;
-  color: var(--colorOnInkMuted);
+  color: var(--colorTextSoft);
   list-style: none;
 }
 
@@ -469,7 +610,7 @@ Footer
   display: inline-flex;
   align-items: center;
   gap: var(--spaceXs);
-  color: var(--colorOnInkMuted);
+  color: var(--colorTextSoft);
   text-decoration: none;
 }
 
@@ -482,7 +623,7 @@ Footer
   margin-top: var(--spaceXl);
   padding-top: var(--spaceLg);
   border-top: 1px solid var(--colorLineOnInk);
-  color: var(--colorOnInkMuted);
+  color: var(--colorTextSoft);
   font-size: var(--fontSizeSm);
 }
 
@@ -513,6 +654,12 @@ Media queries
 
   .footerContact {
     grid-column: auto;
+  }
+}
+
+@media (min-width: 48em) {
+  .serviceList {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -555,6 +702,29 @@ Media queries
 
   .heroLogo {
     width: 48%;
+  }
+
+  .serviceCard {
+    padding: var(--spaceXl) var(--spaceLg);
+  }
+
+  /* Photo on the left, reasons on the right; the HTML keeps the text first */
+  .aboutLayout {
+    grid-template-areas: "photo content";
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: center;
+    gap: var(--space2xl);
+  }
+
+  .aboutContent {
+    grid-area: content;
+  }
+
+  .aboutPhoto {
+    grid-area: photo;
+    justify-self: start;
+    max-width: 28rem;
+    aspect-ratio: 3 / 4;
   }
 
   .footerGrid {
