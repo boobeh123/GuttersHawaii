@@ -847,31 +847,31 @@ Footer
 }
 
 /**************************************************************
-Thank-you page
+Message pages (thank-you and 404)
 ***************************************************************/
 /* Header, message, and footer fill the screen with the footer at the bottom */
-.thanksPage {
+.messagePage {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   min-height: 100dvh;
 }
 
-/* No section nav on this page: brand and call button on one row */
-.thanksPage .headerBar {
+/* No section nav on these pages: brand and call button on one row */
+.messagePage .headerBar {
   grid-template-areas: "brand call";
   grid-template-columns: 1fr auto;
   padding-block: var(--spaceSm);
 }
 
-.thanksMain {
+.messageMain {
   display: grid;
   flex: 1;
   align-items: center;
   padding-block: var(--sectionPadding);
 }
 
-.thanksCard {
+.messageCard {
   max-width: 34rem;
   margin-inline: auto;
   padding: var(--spaceXl) var(--spaceLg);
@@ -882,7 +882,7 @@ Thank-you page
   text-align: center;
 }
 
-.thanksIcon {
+.messageIcon {
   display: grid;
   place-items: center;
   width: 4.5rem;
@@ -894,24 +894,24 @@ Thank-you page
   font-size: 2rem;
 }
 
-.thanksTitle {
+.messageTitle {
   font-size: var(--fontSizeH2);
 }
 
-.thanksText {
+.messageText {
   margin-bottom: var(--spaceXl);
   color: var(--colorTextSoft);
   font-size: var(--fontSizeLg);
 }
 
-.thanksActions {
+.messageActions {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--spaceSm);
 }
 
-.thanksFooter {
+.messageFooter {
   padding-block: var(--spaceLg);
   color: var(--colorTextSoft);
   font-size: var(--fontSizeSm);
