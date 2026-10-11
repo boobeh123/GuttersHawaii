@@ -7,10 +7,11 @@ Deployed live on Netlify: https://guttershawaii.netlify.app/
 * Static webpage deployed with Netlify
 * Responsive to mobile viewports
 * Accessible to screen readers / Semantic HTML & ARIA
-* SEO Meta tags
+* SEO Meta tags, robots.txt & sitemap.xml
 * Functional Contact Form
 * WebP image format, with each photo in two sizes (640px & 1080px)
 * Security headers (Content-Security-Policy) set in Netlify's `_headers` file
+* Custom 404 page
 
 ## Optimizations
 * Add Privacy policy - Explain what data is collected and how it is used/handled (contact form)
