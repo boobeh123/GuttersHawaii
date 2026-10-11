@@ -1,0 +1,8 @@
+# Security headers for every page and file. Netlify reads this file at deploy.
+# The policy only allows scripts, styles, images, and fonts from this site,
+# so keep everything self-hosted: no CDN links, inline scripts, or inline styles.
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
