@@ -25,6 +25,8 @@ Base
   --colorOnInkMuted: rgba(255, 255, 255, 0.72);
   --colorInputBorder: #7b8794;
   --colorError: #b42318;
+  --colorInkOverlay: rgba(15, 27, 38, 0.75);
+  --colorBackdrop: rgba(9, 18, 26, 0.94);
 
   /* Accent, focus, and secondary text colors switch inside .themeInk sections */
   --colorAccent: var(--colorSkyDeep);
@@ -650,6 +652,127 @@ Our work
   color: var(--colorTextSoft);
   font-size: var(--fontSizeSm);
   line-height: 1.45;
+}
+
+/* Each photo links to its large version; main.js opens it in the viewer instead */
+.workLink {
+  position: relative;
+  display: block;
+  border-radius: var(--radiusLg);
+  cursor: zoom-in;
+}
+
+/* Expand badge in the photo's corner, so phone users know they can tap */
+.workZoom {
+  position: absolute;
+  right: var(--spaceSm);
+  bottom: var(--spaceSm);
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background-color: var(--colorInkOverlay);
+  color: var(--colorWhite);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.workLink:hover .workZoom {
+  background-color: var(--colorSky);
+  color: var(--colorInk);
+}
+
+/* Photo viewer: the browser's dialog element, filling the screen */
+.photoViewer {
+  --colorFocus: var(--colorSky);
+  --colorTextSoft: var(--colorOnInkMuted);
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: var(--spaceMd);
+  border: 0;
+  background-color: transparent;
+  color: var(--colorWhite);
+}
+
+/* Close button on top, photo and caption in the middle, previous/next at the bottom */
+.photoViewer[open] {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  align-items: center;
+  justify-items: center;
+  gap: var(--spaceSm);
+}
+
+.photoViewer::backdrop {
+  background-color: var(--colorBackdrop);
+}
+
+/* Keeps the page behind the viewer from scrolling */
+html:has(.photoViewer[open]) {
+  overflow: hidden;
+}
+
+.photoViewerFigure {
+  display: grid;
+  justify-items: center;
+  gap: var(--spaceSm);
+  min-height: 0;
+  max-height: 100%;
+  margin: 0;
+}
+
+.photoViewerImage {
+  width: auto;
+  max-width: 100%;
+  max-height: calc(100vh - 11rem);
+  max-height: calc(100dvh - 11rem);
+  border-radius: var(--radiusSm);
+}
+
+.photoViewerCaption {
+  color: var(--colorTextSoft);
+  text-align: center;
+}
+
+.photoViewerNav {
+  display: flex;
+  align-items: center;
+  gap: var(--spaceLg);
+}
+
+.photoViewerCount {
+  min-width: 4.5rem;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+.photoViewerButton {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border: 2px solid var(--colorOnInkMuted);
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--colorWhite);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.photoViewerButton:hover {
+  border-color: var(--colorWhite);
+  background-color: var(--colorWhite);
+  color: var(--colorInk);
+}
+
+.photoViewerClose {
+  justify-self: end;
 }
 
 /**************************************************************
