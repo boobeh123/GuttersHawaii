@@ -21,6 +21,21 @@ Deployed live on Netlify: https://guttershawaii.netlify.app/
 
 ## Version History
 ---------------------------------------------------------------------------------------------------------------------------
+# 🛠️ Gutters Hawaii Patch 0.5 — Redesign
+📅 **Release Date:** October 11th, 2026
+
+---
+
+## 📢 Developer's Notes - **Complete redesign**
+
+- Removed Bootstrap, Font Awesome, and Google Fonts. The page now uses one stylesheet built from the logo's colors
+- The contact form checks required fields before sending
+- Photos are resized and shown whole. A phone loads about 0.8 MB of images instead of 3.8 MB
+- The thank-you page no longer redirects on a timer
+
+![Lighthouse score v2 for Gutters Hawaii LLC](/public/images/lighthousev22026.png)
+
+---------------------------------------------------------------------------------------------------------------------------
 # 🛠️ Gutters Hawaii Patch 0.4 — Dynamic footer
 📅 **Release Date:** January 18th, 2026
 
