@@ -9,17 +9,29 @@ Deployed live on Netlify: https://guttershawaii.netlify.app/
 * Accessible to screen readers / Semantic HTML & ARIA
 * SEO Meta tags
 * Functional Contact Form
-* WebP image format
+* WebP image format, with each photo in two sizes (640px & 1080px)
+* Security headers (Content-Security-Policy) set in Netlify's `_headers` file
 
 ## Optimizations
-* "Make it look like Windows Hawaii"
-* Gallery
 * Add Privacy policy - Explain what data is collected and how it is used/handled (contact form)
 
 ## Technologies
-<img src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" /><img src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="50" /><img src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="40" /><img src="https://profilinator.rishav.dev/skills-assets/bootstrap.svg" alt="BootStrap" height="40" />
+<img src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" /><img src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="50" /><img src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="40" />
 
 ## Version History
+---------------------------------------------------------------------------------------------------------------------------
+# 🛠️ Gutters Hawaii Patch 0.5 — Redesign
+📅 **Release Date:** October 11th, 2026
+
+---
+
+## 📢 Developer's Notes - **Complete redesign**
+
+- Removed Bootstrap, Font Awesome, and Google Fonts. The page now uses one stylesheet built from the logo's colors
+- The contact form checks required fields before sending
+- Photos are resized and shown whole. A phone loads about 0.8 MB of images instead of 3.8 MB
+- The thank-you page no longer redirects on a timer
+
 ---------------------------------------------------------------------------------------------------------------------------
 # 🛠️ Gutters Hawaii Patch 0.4 — Dynamic footer
 📅 **Release Date:** January 18th, 2026
