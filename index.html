@@ -349,6 +349,93 @@
         </div>
       </div>
     </section>
+
+    <section class="contactSection themeSand" id="contact" aria-labelledby="contactHeading">
+      <div class="container contactLayout">
+        <div>
+          <h2 class="sectionTitle" id="contactHeading">Get in touch</h2>
+          <ul class="contactList">
+            <li>
+              <a class="contactMethod" href="tel:+18084218481">
+                <span class="contactIcon"><svg class="icon" aria-hidden="true"><use href="/public/images/icons.svg#iconPhone"></use></svg></span>
+                <span>
+                  <span class="contactLabel">Call</span>
+                  <span class="contactValue">(808) 421-8481</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="contactMethod" href="sms:+18084218481">
+                <span class="contactIcon"><svg class="icon" aria-hidden="true"><use href="/public/images/icons.svg#iconMessage"></use></svg></span>
+                <span>
+                  <span class="contactLabel">Text</span>
+                  <span class="contactValue">(808) 421-8481</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="contactMethod" href="mailto:Guttershawaii@gmail.com">
+                <span class="contactIcon"><svg class="icon" aria-hidden="true"><use href="/public/images/icons.svg#iconMail"></use></svg></span>
+                <span>
+                  <span class="contactLabel">Email</span>
+                  <span class="contactValue">Guttershawaii@gmail.com</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="contactMethod" href="https://www.instagram.com/gutters_hawaii/" target="_blank" rel="noopener noreferrer">
+                <span class="contactIcon"><svg class="icon" aria-hidden="true"><use href="/public/images/icons.svg#iconInstagram"></use></svg></span>
+                <span>
+                  <span class="contactLabel">Instagram</span>
+                  <span class="contactValue">@gutters_hawaii<span class="visuallyHidden"> (opens in a new tab)</span></span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <div class="contactMethod">
+                <span class="contactIcon"><svg class="icon" aria-hidden="true"><use href="/public/images/icons.svg#iconMapPin"></use></svg></span>
+                <span>
+                  <span class="contactLabel">Service area</span>
+                  <span class="contactValue">Serving all of Oahu</span>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contactCard">
+          <form class="contactForm" name="contact" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field" aria-labelledby="contactHeading">
+            <input type="hidden" name="form-name" value="contact">
+            <!-- Spam trap: hidden from everyone, so only bots fill it in -->
+            <p hidden>
+              <label>Don't fill this out if you're human: <input name="bot-field" autocomplete="off"></label>
+            </p>
+            <div class="formField">
+              <label class="formLabel" for="contactName">Full name</label>
+              <input class="formInput" id="contactName" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="formField">
+              <label class="formLabel" for="contactEmail">Email address</label>
+              <input class="formInput" id="contactEmail" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="formField">
+              <label class="formLabel" for="contactPhone">Phone number <span class="formOptional">(optional)</span></label>
+              <input class="formInput" id="contactPhone" name="phone" type="tel" autocomplete="tel" aria-describedby="phoneHint">
+              <p class="formHint" id="phoneHint">We'll never share your number with anyone else.</p>
+            </div>
+            <div class="formField">
+              <label class="formLabel" for="contactMessage">Your message</label>
+              <textarea class="formInput" id="contactMessage" name="message" rows="5" required></textarea>
+            </div>
+            <button class="button buttonDark formSubmit" type="submit">
+              <svg class="icon" aria-hidden="true"><use href="/public/images/icons.svg#iconSend"></use></svg>
+              Send message
+            </button>
+            <p class="formHint">We'll never share your data with anyone else.</p>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="siteFooter themeInk">

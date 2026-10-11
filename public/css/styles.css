@@ -23,6 +23,8 @@ Base
   --colorLine: #e2ddd5;
   --colorLineOnInk: rgba(255, 255, 255, 0.14);
   --colorOnInkMuted: rgba(255, 255, 255, 0.72);
+  --colorInputBorder: #7b8794;
+  --colorError: #b42318;
 
   /* Accent, focus, and secondary text colors switch inside .themeInk sections */
   --colorAccent: var(--colorSkyDeep);
@@ -307,6 +309,50 @@ Components
   width: 1.5em;
   height: 1.5em;
   color: var(--colorSky);
+}
+
+/* Form controls */
+.formField {
+  display: grid;
+  gap: 0.375rem;
+  margin-bottom: var(--spaceLg);
+}
+
+.formLabel {
+  font-weight: 600;
+}
+
+.formOptional {
+  color: var(--colorTextSoft);
+  font-weight: 400;
+}
+
+.formInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--colorInputBorder);
+  border-radius: var(--radiusSm);
+  background-color: var(--colorWhite);
+  color: var(--colorInk);
+  font: inherit;
+  line-height: 1.4;
+}
+
+textarea.formInput {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+/* Red border only after the visitor has interacted with the field */
+.formInput:user-invalid {
+  border-width: 2px;
+  border-color: var(--colorError);
+}
+
+.formHint {
+  margin: 0;
+  color: var(--colorTextSoft);
+  font-size: var(--fontSizeSm);
 }
 
 /**************************************************************
@@ -646,6 +692,77 @@ Service areas
 }
 
 /**************************************************************
+Contact
+***************************************************************/
+.contactSection {
+  padding-block: var(--sectionPadding);
+}
+
+.contactLayout {
+  display: grid;
+  gap: var(--spaceXl);
+}
+
+.contactList {
+  display: grid;
+  gap: var(--spaceMd);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* One way to reach Gutters Hawaii: icon, small label, and the number or address */
+.contactMethod {
+  display: flex;
+  align-items: center;
+  gap: var(--spaceMd);
+  color: var(--colorInk);
+  text-decoration: none;
+}
+
+.contactMethod:hover .contactValue {
+  text-decoration: underline;
+}
+
+.contactIcon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--colorWhite);
+  color: var(--colorSkyDeep);
+  font-size: 1.25rem;
+  box-shadow: var(--shadowCard);
+}
+
+.contactLabel {
+  display: block;
+  color: var(--colorTextSoft);
+  font-size: var(--fontSizeSm);
+}
+
+.contactValue {
+  display: block;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.contactCard {
+  padding: var(--spaceLg);
+  border: 1px solid var(--colorLine);
+  border-radius: var(--radiusLg);
+  background-color: var(--colorWhite);
+  box-shadow: var(--shadowCard);
+}
+
+.formSubmit {
+  width: 100%;
+  margin-bottom: var(--spaceSm);
+}
+
+/**************************************************************
 Footer
 ***************************************************************/
 .siteFooter {
@@ -737,6 +854,10 @@ Media queries
 
   .areaList {
     columns: 3;
+  }
+
+  .contactCard {
+    padding: var(--spaceXl);
   }
 
   .footerGrid {
@@ -831,6 +952,13 @@ Media queries
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+  }
+
+  /* Ways to reach us on the left, the form on the right */
+  .contactLayout {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    align-items: start;
+    gap: var(--space2xl);
   }
 
   .footerGrid {
